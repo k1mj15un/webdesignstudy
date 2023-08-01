@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 100%;
+        }
+        #main{
+            width: 100%;
+            display: flex;
+        }
+        #header{
+            width: 200px;
+        }
+        #header .logo{
+            width: 100%;
+            height: 100px;
+            background-color: bisque;
+        }
+        #header .nav{
+            width: 100%;
+            height: 650px;
+            background-color: rgb(214, 170, 117);
+        }
+        #contents{
+            width: 400px;
+        }
+        #contents .contents1{
+            width: 100%;
+            height: 150px;
+            background-color: rgb(176, 176, 253);
+        }
+        #contents .contents2{
+            width: 100%;
+            height: 300px;
+            background-color: rgb(97, 97, 247);
+        }
+        #contents .contents3{
+            width: 100%;
+            height: 300px;
+            background-color: rgb(25, 25, 148);
+        }
+        #slider{
+            width: calc(100% - 200px - 400px);
+            height: 750px;
+            background-color: blueviolet;
+        }
+        #footer{
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1{
+            width: 15%;
+            height: 100px;
+            background-color: rgb(255, 174, 174);
+        }
+        #footer .footer2{
+            width: 70%;
+            height: 100px;
+            background-color: rgb(247, 92, 92);
+        }
+        #footer .footer3{
+            height: 100px;
+            width: 15%;
+            background-color: rgb(255, 12, 12);
+        }
+        /*nav*/
+        .nav > ul > li{
+            position: relative;
+        }
+        .nav > ul > li > a{
+            display: block;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            background-color: cornflowerblue;
+        }
+        .nav > ul > li > a:hover{
+            background-color: rgb(37, 87, 179);
+        }
+        .nav > ul > li > ul{
+            position: absolute;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            background-color: coral;
+            display: none;
+        }
+        .nav > ul > li > ul > li{
+            list-style-type: none;
+        }
+        .nav > ul > li > ul > li > a{
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover{
+            background-color: rgb(155, 65, 32);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <div class="logo"></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">박물관 소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">박물관 연혁</a></li>
+                                <li><a href="#">박물관 조직도</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">전시</a>
+                            <ul class="submenu">
+                                <li><a href="#">전시 리스트</a></li>
+                                <li><a href="#">전시 일정</a></li>
+                                <li><a href="#">특별전</a></li>
+                                <li><a href="#">지역 작가</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">체험행사</a>
+                            <ul class="submenu">
+                                <li><a href="#">문화행사</a></li>
+                                <li><a href="#">진로체험</a></li>
+                                <li><a href="#">명사특강</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="submenu">
+                                <li><a href="#">사용자메뉴얼</a></li>
+                                <li><a href="#">박물관 약도</a></li>
+                                <li><a href="#">게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="contents">
+                <div class="contents1"></div>
+                <div class="contents2"></div>
+                <div class="contents3"></div>
+            </section>
+            <article id="slider"></article>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").stop().slideDown();
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(this).find(".submenu").stop().slideUp();
+            });
+        })
+    </script>
+</body>
+</html>
