@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap{
+            width: 1000px;
+            display: flex;
+        }
+        #aside{
+            width: 200px;
+        }
+        #aside .logo{
+            width: 100%;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        /* nav */
+        #aside .nav{
+            width: 100%;
+            height: 550px;
+            background-color: rgb(255, 247, 235);
+        }
+        .nav > ul > li > a{
+            display: block;
+            padding: 10px 30px;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+        .nav > ul > li > a:hover{
+            background-color: rgb(255, 207, 135);
+        }
+        .nav > ul > li > ul{
+            display: none;
+        }
+        .nav > ul > li > ul > li > a{
+            display: block;
+            padding: 10px 30px;
+            text-align: center;
+            background-color: rgb(228, 167, 77);
+        }
+        .nav > ul > li > ul > li > a:hover{
+            background-color: rgb(212, 138, 26);
+        }
+        #main{
+            width: 800px;
+        }
+        #slider{
+            width: 100%;
+            height: 350px;
+        }
+        #contents{
+            width: 100%;
+            display: flex;
+        }
+        #contents .contents1{
+            width: 33.3333%;
+            height: 200px;
+            background-color: tomato;
+        }
+        #contents .contents2{
+            width: 33.3333%;
+            height: 200px;
+            background-color: rgb(172, 28, 3);
+        }
+        #contents .contents3{
+            width: 33.3333%;
+            height: 200px;
+            background-color: rgb(255, 180, 167);
+        }
+        #footer{
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1{
+            width: 80%;
+            height: 100px;
+            background-color: thistle;
+        }
+        #footer .footer2{
+            width: 20%;
+        }
+        #footer .footer2 .footer2-1{
+            width: 100%;
+            height: 50px;
+            background-color: steelblue;
+        }
+        #footer .footer2 .footer2-2{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(194, 228, 255);
+        }
+        /* slider fadein-out */
+        /*.sliderWrap{
+            position: relative;
+        }
+        .sliderWrap > div{
+            display: none;
+        }
+        .sliderWrap > div:first-child{
+            display: block;
+        }
+        .sliderWrap .slider{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .sliderWrap .slider img{
+            vertical-align: top;
+        }
+        .sliderWrap .slider span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: slategrey;
+            color: #fff;
+        }*/
+        /* slider 가로로 넘기기*/
+        #slider{
+            overflow: hidden;
+        }
+        .sliderWrap{
+            display: flex;
+        }
+        .sliderWrap .slider{
+            position: relative;
+        }
+        .sliderWrap img{
+            vertical-align: top;
+        }
+        .sliderWrap span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: beige;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <div class="logo"></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">축제소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">초대의 글</a></li>
+                            <li><a href="#">축제개요</a></li>
+                            <li><a href="#">축제연혁</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">행사안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">셔틀버스안내</a></li>
+                            <li><a href="#">행사안내</a></li>
+                            <li><a href="#">행사일정</a></li>
+                            <li><a href="#">소공연장</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">홍보마당</a>
+                        <ul class="submenu">
+                            <li><a href="#">축제소식</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">음식레시피</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여마당</a>
+                        <ul class="submenu">
+                            <li><a href="#">참가후기</a></li>
+                            <li><a href="#">연꽃갤러리</a></li>
+                            <li><a href="#">포토갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="./웹디c-img/slider01.jpg" alt="">
+                        <span>이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <img src="./웹디c-img/slider02.jpg" alt="">
+                        <span>이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <img src="./웹디c-img/slider03.jpg" alt="">
+                        <span>이미지3</span>
+                    </div>
+                </div>
+            </article>
+            <section id="contents">
+                <div class="contents1"></div>
+                <div class="contents2"></div>
+                <div class="contents3"></div>
+            </section>
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").stop().slideDown();
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(this).find(".submenu").stop().slideUp();
+            });
+
+            // fadein-out
+            /*let currentIndex = 0;
+
+            setInterval(function(){
+                let nextIndex = (currentIndex + 1) % 3;
+                $(".slider").eq(currentIndex).fadeOut(1200);
+                $(".slider").eq(nextIndex).fadeIn(1200);
+
+                currentIndex = nextIndex;
+            }, 3000);*/
+
+            // 가로로 넘기기
+            let currentIndex = 0;
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+                currentIndex++;
+                $(".sliderWrap").animate({marginLeft: -currentIndex * 100 + "%"}, 600);
+
+                if(currentIndex == 3){
+                    setTimeout(function(){
+                        $(".sliderWrap").animate({marginLeft: 0}, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
