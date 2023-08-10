@@ -4,97 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        #wrap{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        #aside{
-            width: 200px;
-        }
-        #aside .logo{
-            width: 100%;
-            height: 100px;
-            background-color: antiquewhite;
-        }
-        #aside .nav{
-            width: 100%;
-            height: 700px;
-            background-color: rgb(255, 222, 178);
-        }
-        #main{
-            width: calc(100% - 200px);
-        }
-        #slider{
-            width: 100%;
-            height: 400px;
-            background-color: azure;
-        }
-        #link{
-            width: 100%;
-            height: 150px;
-            background-color: bisque;
-        }
-        #contents{
-            width: 100%;
-            display: flex;
-        }
-        #contents .notice{
-            width: 50%;
-            height: 250px;
-            background-color: tomato;
-        }
-        #contents .gallery{
-            width: 50%;
-            height: 250px;
-            background-color: rgb(255, 171, 157);
-        }
-        #footer{
-            width: 100%;
-            display: flex;
-        }
-        #footer .footer1{
-            width: 10%;
-            height: 120px;
-            background-color: thistle;
-        }
-        #footer .footer2{
-            width: 80%;
-        }
-        #footer .footer2 .footer2-1{
-            width: 100%;
-            height: 60px;
-            background-color: rgb(255, 216, 255);
-        }
-        #footer .footer2 .footer2-2{
-            width: 100%;
-            height: 60px;
-            background-color: rgb(255, 120, 255);
-        }
-        #footer .footer3{
-            width: 10%;
-            height: 120px;
-            background-color: rgb(143, 104, 143);
-        }
-    </style>
+    <link rel="stylesheet" href="./d-4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./d-4.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside">
+        <header id="header">
             <div class="logo"></div>
-            <nav class="nav"></nav>
-        </aside>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">인기모음전</a>
+                        <ul class="submenu">
+                            <li><a href="#">수저모음</a></li>
+                            <li><a href="#">도마모음</a></li>
+                            <li><a href="#">그릇모음</a></li>
+                            <li><a href="#">접시모음</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">베스트상품</a>
+                        <ul class="submenu">
+                            <li><a href="#">주방용품</a></li>
+                            <li><a href="#">설비제품</a></li>
+                            <li><a href="#">인덕션제품</a></li>
+                            <li><a href="#">실리콘제품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">업종별샵</a>
+                        <ul class="submenu">
+                            <li><a href="#">한식기물</a></li>
+                            <li><a href="#">양식기물</a></li>
+                            <li><a href="#">일식기물</a></li>
+                            <li><a href="#">중식기물</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">인덕션용품</a>
+                        <ul class="submenu">
+                            <li><a href="#">냄비/솥</a></li>
+                            <li><a href="#">후라이팬/주물</a></li>
+                            <li><a href="#">인덕션렌지</a></li>
+                            <li><a href="#">기타제품</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <main id="main">
-            <article id="slider"></article>
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="https://images.unsplash.com/photo-1691520673295-9626f624869b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="슬라이드1">
+                        <span>이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <img src="https://images.unsplash.com/photo-1691562584110-2ca1a2dc8f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="슬라이드2">
+                        <span>이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <img src="https://images.unsplash.com/photo-1691440501591-8aaec69b2b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="슬라이드3">
+                        <span>이미지3</span>
+                    </div>
+                </div>
+            </article>
             <div id="link"></div>
             <section id="contents">
-                <div class="notice"></div>
-                <div class="gallery"></div>
+                <div class="contents1"></div>
+                <div class="contents2"></div>
             </section>
         </main>
         <footer id="footer">
