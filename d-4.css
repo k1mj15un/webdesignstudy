@@ -2,9 +2,9 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
     text-decoration: none;
-    color: #000;
+    color: #333;
 }
 #wrap{
     width: 100%;
@@ -18,6 +18,14 @@
     width: 100%;
     height: 100px;
     background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header .logo a{
+    display: block;
+    font-size: 24px;
+    color: blueviolet;
 }
 
 /* nav */
@@ -25,8 +33,6 @@
     width: 100%;
     height: 700px;
     background-color: aquamarine;
-}
-.nav{
     position: relative;
     z-index: 1000;
 }
@@ -34,13 +40,13 @@
     position: relative;
 }
 .nav > ul > li > a{
-    padding: 10px;
     display: block;
     text-align: center;
-    background-color: bisque;
+    padding: 10px 20px;
+    background-color: thistle;
 }
 .nav > ul > li > a:hover{
-    background-color: rgb(255, 209, 152);
+    background-color: rgb(195, 139, 195);
 }
 .nav > ul > li > ul{
     position: absolute;
@@ -58,7 +64,7 @@
     width: 100px;
 }
 .nav > ul > li > ul > li > a:hover{
-    background-color: rgb(250, 183, 101);
+    background-color: #a2a2a2;
 }
 #main{
     position: relative;
@@ -67,70 +73,44 @@
     content: "";
     width: 0%;
     height: 193px;
-    background-color: rgb(255, 170, 67);
+    background-color: #b0b0b0;
     position: absolute;
     left: 0;
     top: 100px;
     z-index: 1;
-    transition: all 300ms;
 }
 #main.on::after{
     width: 100%;
+    background-color: #b0b0b0;
 }
+
 
 #main{
     width: calc(100% - 200px);
 }
-
-/* slider */
 #slider{
     width: 100%;
     height: 400px;
-    overflow: hidden;
+    background-color: aqua;
 }
-.sliderWrap{
-    width: 100%;
-    height: 1200px;
-}
-.sliderWrap .slider{
-    width: 100%;
-    height: 400px;
-    position: relative;
-}
-.sliderWrap .slider img{
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
-.sliderWrap .slider span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: slategray;
-    padding: 10px;
-    color: #fff;
-}
-
 #link{
     width: 100%;
     height: 150px;
-    background-color: antiquewhite;
+    background-color: thistle;
 }
 #contents{
     width: 100%;
     display: flex;
 }
-#contents .contents1{
+#contents .notice{
     width: 50%;
     height: 250px;
-    background-color: tomato;
+    background-color: teal;
 }
-#contents .contents2{
+#contents .gallery{
     width: 50%;
     height: 250px;
-    background-color: rgb(255, 172, 158);
+    background-color: steelblue;
 }
 #footer{
     width: 100%;
@@ -139,24 +119,23 @@
 #footer .footer1{
     width: 10%;
     height: 120px;
-    background-color: thistle;
+    background-color: silver;
 }
 #footer .footer2{
     width: 80%;
-    height: 120px;
 }
 #footer .footer2 .footer2-1{
     width: 100%;
     height: 60px;
-    background-color: rgb(255, 231, 255);
+    background-color: bisque;
 }
-#footer .footer2 .footer2-2{
+#footer .footer2 .footer2-1{
     width: 100%;
     height: 60px;
-    background-color: rgb(255, 201, 255);
+    background-color: rgb(255, 209, 152);
 }
 #footer .footer3{
     width: 10%;
     height: 120px;
-    background-color: rgb(240, 141, 240);
+    background-color: blue;
 }
