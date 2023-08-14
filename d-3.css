@@ -1,0 +1,208 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #333;
+}
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#header{
+    width: 200px;
+}
+#header .logo{
+    width: 100%;
+    height: 100px;
+    background-color: azure;
+}
+
+/* nav */
+
+#header .nav{
+    width: 100%;
+    height: 750px;
+    background-color: azure;
+    position: relative;
+    z-index: 1000;
+}
+.nav > ul > li{
+    position: relative;
+}
+.nav > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: aquamarine;
+}
+.nav > ul > li > a:hover{
+    background-color: rgb(93, 185, 155);
+}
+.nav > ul > li > ul{
+    position: absolute;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    display: none;
+}
+.nav > ul > li > ul > li{
+    display: inline;
+}
+.nav > ul > li > ul > li > a{
+    display: inline-block;
+    padding: 10px;
+    width: 100px;
+}
+.nav > ul > li > ul > li > a:hover{
+    background-color: aqua;
+}
+#main{
+    position: relative;
+}
+#main::after{
+    content: '';
+    width: 0%;
+    height: 180px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: wheat;
+    z-index: 1;
+    transition: all 300ms;
+}
+#main.on::after{
+    width: 100%;
+}
+
+#main{
+    width: calc(100% - 200px);
+}
+/* slider */
+#slider{
+    width: 100%;
+    height: 400px;
+    background-color: burlywood;
+    position: relative;
+}
+.sliderWrap{
+    position: relative;
+}
+.sliderWrap > div{
+    display: none;
+}
+.sliderWrap > div:first-child{
+    display: block;
+}
+.sliderWrap .slider{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+}
+.sliderWrap .slider img{
+    width: 100%;
+    height: 400px;
+    vertical-align: top;
+}
+.sliderWrap .slider .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: teal;
+    padding: 20px 50px;
+    text-align: center;
+}
+.sliderWrap .slider .text h3{
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.sliderWrap .slider .text p{
+    color: #fff;
+}
+
+
+#slider .link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 300px;
+    background-color: slateblue;
+}
+#banner{
+    width: 100%;
+    height: 200px;
+    background-color: cadetblue;
+}
+#tab{
+    width: 100%;
+    height: 250px;
+    background-color: thistle;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* tab */
+#tab .tab-menu{
+    margin-bottom: 10px;
+}
+#tab .tab-menu a:active{
+    text-decoration: underline;
+}
+#tab .tab-cont .notice{
+    display: none;
+}
+#tab .tab-cont .notice li{
+    display: flex;
+}
+#tab .tab-cont .notice li a{
+    width: 75%;
+    line-height: 1.8;
+}
+#tab .tab-cont .notice li a:hover{
+    text-decoration: underline;
+}
+#tab .tab-cont .notice li span{
+    width: 25%;
+    line-height: 1.8;
+}
+#tab .tab-cont .gallery{
+    display: flex;
+}
+#tab .tab-cont .gallery li a{
+    margin-right: 10px;
+}
+#tab .tab-cont .gallery li a:hover{
+    opacity: 0.5;
+}
+#tab .tab-cont .gallery img{
+    width: 150px;
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+}
+#footer .footer1{
+    width: 200px;
+    height: 120px;
+    background-color: tomato;
+}
+#footer .footer2{
+    width: calc(100% - 200px);
+}
+#footer .footer2 .footer2-1{
+    width: 100%;
+    height: 60px;
+    background-color: steelblue;
+}
+#footer .footer2 .footer2-2{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(159, 212, 255);
+}
