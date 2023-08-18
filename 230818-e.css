@@ -1,0 +1,168 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #333;
+}
+#wrap{
+    width: 100%;
+}
+#main{
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 120px);
+}
+#header{
+    width: 200px;
+    background-color: rgb(255, 227, 223);
+}
+
+/* logo */
+#header .logo{
+    width: 100%;
+    height: 20%;
+}
+#header .logo h1{
+    display: inline-block;
+    padding: 60px 20px;
+}
+
+/* nav */
+#header .nav{
+    width: 100%;
+    height: 80%;
+}
+.nav > ul > li > a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(255, 201, 192);
+}
+.nav > ul > li > a:hover{
+    background-color: tomato;
+}
+.nav > ul > li > ul{
+    display: none;
+}
+.nav > ul > li > ul > li > a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(255, 175, 160);
+}
+.nav > ul > li > ul > li > a:hover{
+    background-color: rgb(255, 141, 121);
+}
+
+#contents{
+    width: 400px;
+}
+
+/* banner */
+#contents #banner{
+    width: 100%;
+    height: 15%;
+    background-image: url(./e유형이미지소스/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contents #banner h3{
+    color: #fff;
+    margin-right: 10px;
+}
+#contents #banner a{
+    color: #fff;
+    background-color: tomato;
+    padding: 20px;
+    border-radius: 50%;
+}
+#contents #banner a:hover{
+    background-color: rgb(255, 49, 13);
+}
+
+#contents #notice{
+    width: 100%;
+    height: 35%;
+    background-color: azure;
+}
+#contents #gallery{
+    width: 100%;
+    height: 35%;
+    background-color: blue;
+}
+#contents #link{
+    width: 100%;
+    height: 15%;
+    background-color: turquoise;
+}
+
+/* slider */
+#slider{
+    width: calc(100% - 600px);
+    height: calc(100vh - 120px);
+    background-color: thistle;
+    overflow: hidden;
+}
+#slider .sliderWrap{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+.sliderWrap .slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sliderWrap .slider img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.sliderWrap .slider .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    padding: 20px 50px;
+    text-align: center;
+}
+.sliderWrap .slider .text h2{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sliderWrap .slider .text h4{
+    color: #fff;
+}
+
+
+#footer{
+    width: 100%;
+    display: flex;
+}
+#footer .footer1{
+    width: 200px;
+    height: 120px;
+    background-color: steelblue;
+}
+#footer .footer2{
+    width: calc(100% - 200px);
+}
+#footer .footer2 .footer2-1{
+    width: 100%;
+    height: 60px;
+    background-color: bisque;
+}
+#footer .footer2 .footer2-2{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(185, 135, 74);
+}
