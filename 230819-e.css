@@ -1,0 +1,241 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #333;
+}
+#wrap{
+    width: 100%;
+}
+#main{
+    width: 100%;
+    display: flex;
+}
+#header{
+    width: 200px;
+    background-color: rgb(219, 239, 255);
+}
+
+/* logo */
+#header .logo{
+    width: 100%;
+    height: 100px;
+}
+#header .logo h1{
+    display: inline-block;
+    padding: 30px;
+}
+#header .logo a{
+    color: rgb(0, 82, 149);
+}
+
+/* nav */
+#header .nav{
+    width: 100%;
+    height: 700px;
+}
+.nav > ul > li > a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(185, 224, 255);
+}
+.nav > ul > li > a:hover{
+    background-color: rgb(154, 209, 255);
+}
+.nav > ul > li > ul{
+    display: none;
+}
+.nav > ul > li > ul > li > a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(154, 209, 255);
+}
+.nav > ul > li > ul > li > a:hover{
+    background-color: rgb(111, 190, 255);
+}
+
+#contents{
+    width: 400px;
+}
+
+/* notice */
+#notice{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#notice h3{
+    margin-bottom: 20px;
+}
+#notice ul li{
+    line-height: 1.8;
+    display: flex;
+}
+#notice ul li a{
+    width: 75%;
+}
+#notice ul li span{
+    width: 25%;
+    text-align: end;
+}
+#notice ul li a:hover{
+    text-decoration: underline;
+}
+
+/* gallery */
+#gallery{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(160, 192, 218);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#gallery h3{
+    margin-bottom: 20px;
+}
+#gallery .gallery{
+    display: flex;
+    justify-content: space-between;
+}
+#gallery .gallery li{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#gallery .gallery li img{
+    width: 170px;
+}
+#gallery .gallery li span{
+    padding: 0 50px;
+}
+#gallery .gallery li:hover img{
+    opacity: 0.7;
+}
+
+/* link */
+#link{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+}
+#link ul{
+    display: flex;
+    justify-content: space-between;
+}
+#link ul li{
+    display: block;
+    text-align: center;
+}
+#link ul li img{
+    width: 60px;
+}
+#link ul li span{
+    padding: 5px 20px;
+}
+#link ul li:hover img{
+    opacity: 0.7;
+}
+
+/* slider */
+#slider{
+    width: calc(100% - 600px);
+    height: 800px;
+    overflow: hidden;
+}
+#slider .sliderWrap{
+    width: 100%;
+    height: 100%;
+}
+.sliderWrap .slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sliderWrap .slider img{
+    width: 100%;
+    height: 100%;
+}
+.sliderWrap .slider .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(125, 197, 255);
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+}
+.sliderWrap .slider .text h2{
+    margin-bottom: 10px;
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    display: flex;
+    background-color: rgb(219, 239, 255);
+
+}
+#footer .footer1{
+    width: 15%;
+    height: 100px;
+}
+#footer .footer1 h2{
+    display: block;
+    padding: 30px 60px;
+    color: #868686;
+}
+#footer .footer2{
+    width: 70%;
+    height: 100px;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+#footer .footer3{
+    width: 15%;
+    height: 100px;
+    padding: 35px 60px;
+    box-sizing: border-box;
+}
+#footer .footer3 select{
+    width: 90%;
+}
+
+/* popup */
+#wrap{
+    position: relative;
+}
+.popup-view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: rgb(168, 216, 255);
+    border: 2px solid rgb(0, 69, 125);
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+.popup-view h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.popup-view .popup-close{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    background-color: rgb(0, 69, 125);
+    color: #fff;
+}
